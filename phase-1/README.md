@@ -22,7 +22,7 @@ We also planned to go for the transactions per block task but couldn't get it to
 
 ### How we put the messages into a single transaction
 
-We took the regen-ledger software and modiefied it a bit. We changed the creation of the send transaction to include the send message a specified amount of times in the transaction. Then we would sign and broadcast it with the cli as usual albeit with a higher gas limit. You can check out the changes herer: https://github.com/MarcelMWS/cosmos-sdk/tree/v0.41.0-regen-tx-spam-0.0.1
+We took the regen-ledger software and modiefied it a bit. We changed the creation of the send transaction to include the send message a specified amount of times in the transaction. Then we would sign and broadcast it with the cli as usual albeit with a higher gas limit. You can check out the changes here: https://github.com/MarcelMWS/cosmos-sdk/tree/v0.41.0-regen-tx-spam-0.0.1
 
 You could achieve the same by creating the transaction with the --generate-only flag, than edit the resulting json by copy-pasting the contained send message several times (in our case 7429 times). This works without a problem since the messages are included in a transaction within an array. You should also adjust the gas limit (we just picked a very high gas limit and then set a fixed fee of 5000utree, which worked since not all nodes specified minimum gas prices). Now that you have your transaction completed you can sign it and then broadcast it. So the three commands you need are:
 * regen tx bank send [...] --generate-only
