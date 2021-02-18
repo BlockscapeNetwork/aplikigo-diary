@@ -36,7 +36,7 @@ cosmovisor
 
 ### Build Binary Without EXPERIMENTAL Flag
 
-Some people hat issues because they didn't use the EXPERIMENTAL flag when building the version v0.6.1. This meant that they had the correct version, but the handler for the upgrademodle did not work. For this problem it didn't matter whther the Cosmovisor or the manual approach was chosen.
+Some people hat issues because they didn't use the EXPERIMENTAL flag when building the version v0.6.1. This meant that they had the correct version, but the handler for the upgrade module did not work. For this problem to occur it didn't matter whether the Cosmovisor or the manual approach was chosen.
 
 The correct way to build v0.6.1 was 
 
