@@ -22,3 +22,4 @@ You can browse and download backups at: http://135.181.32.203:8080/
 
 * [Phase 1](phase-1/README.md)
 * [Gir Update](gir_update/README.md)
+* [Phase 3](phase-3/README.md)
